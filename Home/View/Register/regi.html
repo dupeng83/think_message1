@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<style type="text/css">
+		form{
+			width: 300px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<present name="info">
+	{$info.describe}
+	</present>
+	<form action="{:U('Register/regi')}" method="POST">
+		用户名<input type="text" name="username" id="">
+		<br>
+		密码<input type="password" name="password" id="">
+		<br>
+		确认密码<input type="password" name="password1" id="">
+		<br>
+		性别 男<input type="radio" name="sex" value="m">
+		女<input type="radio" name="sex" value="f">
+		<input type="submit" value="tijiao">
+	</form>
+</body>
+</html>

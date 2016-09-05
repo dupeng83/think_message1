@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>login page</title>
+	<style type="text/css">
+		form{
+			width: 300px;
+			margin: 0 auto;
+		}
+		form input{
+			/*display: block;*/
+		}
+	</style>
+</head>
+<body>
+	<present name='verifyCodeMistake'>
+	验证码错误
+	</present>
+	<present name='pwdMistake'>
+	用户名密码错误
+	</present>
+	<form action="{:U('Login/login')}" method="POST">
+		用户名：<input type="text" name="username" ><br>
+		密码：<input type="password" name="password" ><br>
+		验证码：<input type="text" name="code" id=""><img src="{:U('Verify/veri')}" onclick="this.src = this.src+'?'+Math.random()"><br>
+		<input type="submit" value="tijiao">
+	</form>
+	<a href="{:U('Register/regi')}">注册</a>
+</body>
+</html>
